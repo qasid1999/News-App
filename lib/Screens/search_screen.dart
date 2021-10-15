@@ -11,15 +11,16 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(
-          margin: const EdgeInsets.all(50),
-          child: const Center(
-              child: TextField(
-            decoration: InputDecoration(
-              hintText: "Search News",
-            ),
-          )),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF1D1E35),
+        title: const Text("Search your Favorite News"),
+      ),
+      body: Container(
+        margin: const EdgeInsets.all(50),
+        child: const TextField(
+          decoration: InputDecoration(
+            hintText: "Search News",
+          ),
         ),
       ),
     );

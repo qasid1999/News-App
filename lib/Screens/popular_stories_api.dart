@@ -1,28 +1,7 @@
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:news_app/CommonClasses/data.dart';
-import 'package:news_app/CommonClasses/future_builder.dart';
-
-class PopularStoriesScreen extends StatefulWidget {
-  const PopularStoriesScreen({Key key}) : super(key: key);
-
-  @override
-  _PopularStoriesScreenState createState() => _PopularStoriesScreenState();
-}
-
-class _PopularStoriesScreenState extends State<PopularStoriesScreen> {
-  ApiServiceForPopularNews client = ApiServiceForPopularNews();
-
-  @override
-  Widget build(BuildContext context) {
-    return BuildFutureBuilder(
-      future: client.getArticle(),
-      onpressed: () {},
-    );
-  }
-}
 
 class ApiServiceForPopularNews {
   final endPointUrl = "newsapi.org";
